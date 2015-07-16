@@ -19,8 +19,6 @@
 		72E77FC719C9DF02009467D7 /* Engine.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E77FC619C9DF02009467D7 /* Engine.m */; };
 		72E77FCA19C9DF02009467D7 /* Ship.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E77FC919C9DF02009467D7 /* Ship.m */; };
 		72EF586C0DB5CAE7CC3F5529 /* libPods-OpenMeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB4EBD597701E0A82BF401B /* libPods-OpenMeTests.a */; };
-		72F02BC419F952F00027E3AA /* Pirate+ConvenienceMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F02BC119F952F00027E3AA /* Pirate+ConvenienceMethods.m */; };
-		72F02BC519F952F00027E3AA /* Ship+ConvenienceMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F02BC319F952F00027E3AA /* Ship+ConvenienceMethods.m */; };
 		D8DCF8F018C54AE0002AB285 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DCF8EF18C54AE0002AB285 /* Foundation.framework */; };
 		D8DCF8F218C54AE0002AB285 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DCF8F118C54AE0002AB285 /* CoreGraphics.framework */; };
 		D8DCF8F418C54AE0002AB285 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8DCF8F318C54AE0002AB285 /* UIKit.framework */; };
@@ -40,6 +38,8 @@
 		D8DCF96C18C60C6D002AB285 /* FISShipsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DCF96B18C60C6D002AB285 /* FISShipsViewController.m */; };
 		D8DCF96F18C60C7E002AB285 /* FISShipDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DCF96E18C60C7E002AB285 /* FISShipDetailViewController.m */; };
 		D8DCF97218C60C8F002AB285 /* FISPiratesDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D8DCF97118C60C8F002AB285 /* FISPiratesDataStore.m */; };
+		DBFC750D1B56E93900C5DD70 /* Pirate+extraMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFC750C1B56E93900C5DD70 /* Pirate+extraMethods.m */; };
+		DBFC75101B56E94900C5DD70 /* Ship+extraMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFC750F1B56E94900C5DD70 /* Ship+extraMethods.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +98,10 @@
 		D8DCF96E18C60C7E002AB285 /* FISShipDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISShipDetailViewController.m; sourceTree = "<group>"; };
 		D8DCF97018C60C8F002AB285 /* FISPiratesDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISPiratesDataStore.h; sourceTree = "<group>"; };
 		D8DCF97118C60C8F002AB285 /* FISPiratesDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISPiratesDataStore.m; sourceTree = "<group>"; };
+		DBFC750B1B56E93900C5DD70 /* Pirate+extraMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Pirate+extraMethods.h"; sourceTree = "<group>"; };
+		DBFC750C1B56E93900C5DD70 /* Pirate+extraMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Pirate+extraMethods.m"; sourceTree = "<group>"; };
+		DBFC750E1B56E94900C5DD70 /* Ship+extraMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Ship+extraMethods.h"; sourceTree = "<group>"; };
+		DBFC750F1B56E94900C5DD70 /* Ship+extraMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Ship+extraMethods.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,11 +145,15 @@
 			children = (
 				D8DCF97018C60C8F002AB285 /* FISPiratesDataStore.h */,
 				D8DCF97118C60C8F002AB285 /* FISPiratesDataStore.m */,
-				72E77FC219C9DF02009467D7 /* Pirate.h */,
+				DBFC750B1B56E93900C5DD70 /* Pirate+extraMethods.h */,
+				DBFC750C1B56E93900C5DD70 /* Pirate+extraMethods.m */,
 				72E77FC819C9DF02009467D7 /* Ship.h */,
+				DBFC750E1B56E94900C5DD70 /* Ship+extraMethods.h */,
+				DBFC750F1B56E94900C5DD70 /* Ship+extraMethods.m */,
 				72E77FC919C9DF02009467D7 /* Ship.m */,
 				72E77FC519C9DF02009467D7 /* Engine.h */,
 				72E77FC619C9DF02009467D7 /* Engine.m */,
+				72E77FC219C9DF02009467D7 /* Pirate.h */,
 				72E77FC319C9DF02009467D7 /* Pirate.m */,
 				D8DCF90318C54AE0002AB285 /* OpenMe.xcdatamodeld */,
 			);
@@ -385,7 +393,9 @@
 				72E77FC419C9DF02009467D7 /* Pirate.m in Sources */,
 				D8DCF96F18C60C7E002AB285 /* FISShipDetailViewController.m in Sources */,
 				D8DCF8FE18C54AE0002AB285 /* main.m in Sources */,
+				DBFC75101B56E94900C5DD70 /* Ship+extraMethods.m in Sources */,
 				D8DCF96C18C60C6D002AB285 /* FISShipsViewController.m in Sources */,
+				DBFC750D1B56E93900C5DD70 /* Pirate+extraMethods.m in Sources */,
 				7250450019CA302D00192888 /* FISAddPirateViewController.m in Sources */,
 				D8DCF90518C54AE0002AB285 /* OpenMe.xcdatamodeld in Sources */,
 				72E77FCA19C9DF02009467D7 /* Ship.m in Sources */,

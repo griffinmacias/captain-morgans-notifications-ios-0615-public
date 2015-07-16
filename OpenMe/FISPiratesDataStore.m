@@ -28,12 +28,13 @@ typedef NS_ENUM(NSInteger, EngineType) {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _sharedPiratesDataStore = [[FISPiratesDataStore alloc] init];
+        [[NSNotificationCenter defaultCenter] addObserver:_sharedPiratesDataStore selector:@selector(save:) name:@"addStuff" object:nil];
     });
 
     return _sharedPiratesDataStore;
 }
 
-- (void)save
+- (void)save:(NSNotification *)notification
 {
     NSError *error = nil;
     NSManagedObjectContext *managedObjectContext = self.managedObjectContext;

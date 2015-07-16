@@ -8,7 +8,7 @@
 
 #import "FISAddShipViewController.h"
 #import "FISPiratesDataStore.h"
-#import "Ship.h"
+#import "Ship+extraMethods.h"
 #import "Engine.h"
 
 @interface FISAddShipViewController ()
@@ -34,14 +34,22 @@
 
 - (IBAction)saveButtonTapped:(id)sender {
     FISPiratesDataStore *store = [FISPiratesDataStore sharedPiratesDataStore];
-    Ship *newShip = [NSEntityDescription insertNewObjectForEntityForName:@"Ship" inManagedObjectContext:store.managedObjectContext];
-    newShip.name = self.shipNameField.text;
-    newShip.engine = [NSEntityDescription insertNewObjectForEntityForName:@"Engine" inManagedObjectContext:store.managedObjectContext];
-    newShip.engine.engineType = self.engineTypeField.text;
+    
+    NSDictionary *shipSpecs = @{@"name":self.shipNameField.text,
+                              @"engineType":self.engineTypeField.text};
+    Ship *newShip = [Ship shipFromDictionary:shipSpecs andContext:store.managedObjectContext];
     
     [self.pirate addShipsObject:newShip];
     
-    [store save];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"addStuff" object:nil userInfo:nil];
+//    Ship *newShip = [NSEntityDescription insertNewObjectForEntityForName:@"Ship" inManagedObjectContext:store.managedObjectContext];
+//    newShip.name = self.shipNameField.text;
+//    newShip.engine = [NSEntityDescription insertNewObjectForEntityForName:@"Engine" inManagedObjectContext:store.managedObjectContext];
+//    newShip.engine.engineType = self.engineTypeField.text;
+    
+//    [self.pirate addShipsObject:newShip];
+    
+//    [store save];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
